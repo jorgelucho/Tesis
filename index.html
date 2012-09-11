@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Póliza Móvil</title>
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<link href="jquery.mobile-1.1.0.min.css" rel="stylesheet" type="text/css">
+<!--<script type="text/javascript" src="phonegap.js"></script>-->
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript">
+function ValidaNumero(){ 
+
+   var x=document.forms["form1"]["Nombre"].value;
+   var y=document.forms["form1"]["Pass"].value;
+   if (x==null || x=="")
+   {
+   alert("Ingrese el nombre");
+   return false;
+   }
+   if (x==null || x=="")
+   if (y==null || y=="")
+   {
+   alert("Ingrese la cedula");
+   return false;
+   }
+   
+   if ( y=="0926586835")
+   if ( x=="Karenaraujo")
+   {
+      alert("Bienvenida Karen Araujo");
+	  window.location.href="indexka.html";
+	  return false;
+   }
+    if ( x=="Lorenavera")
+    if ( y=="087641295")
+	
+   {
+      alert("Bienvenida Lorena");
+	  window.location.href="indexlore.html";
+	  return false;
+   }
+   
+   alert("Datos Incorrectos");
+ 
+ }
+ 
+</script>
+
+</head>
+
+<body>
+
+ <div data-role="page"  id="pag1" data-theme="a" style="background-image:url(images/fondo-final.JPG)">
+ 
+<div data-role="header" data-theme="c" data-position="fixed" style="height:40px">
+ 
+ <p align="center"> Póliza Móvil </p>
+ 
+ 
+</div>
+ 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+  
+ <br>
+
+  
+  
+<div data-role="content">
+ <form name="form1" method="post" action="">
+              <label for="Nombre">Nombre</label>
+              <input type="text" name="Nombre" id="Nombre"style="width:250px" required placeholder="Ingrese sus Datos"><br />
+               <label for="Password">Cedula de Identidad</label>
+               
+              <input type="password" name="Pass" id="Pass" style="width:250px;height:20px" required placeholder="Ingrese su Cédula">
+              <br>
+               
+              <input name="Ingresar" type="button" class="ui-bar-c" onClick="ValidaNumero();" value="Ingresar">
+            </form>
+            </from>
+            </div>
+  
+ 
+<div data-role="footer" data-theme="c" style="height:35px" data-position="fixed">
+ <h1> Sistema de Consulta de Pólizas </h1>
+</div>
+</div>
+
+</body>
+</html>
